@@ -1,6 +1,9 @@
 // main.h - inline header
 #if !defined(MAIN)
 #define MAIN
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+
 #include <iostream>
 
 using namespace std;
@@ -56,7 +59,8 @@ public:
 	{
 		if (strlen(street) > 0 && strlen(city) > 0 && strlen(state) > 0 && strlen(zip) > 0)
 		{
-			
+			cout << street << endl;
+			cout << city << ", " << state << " " << zip << endl;
 		}
 	}
 };
@@ -64,17 +68,44 @@ public:
 class Contact : public Person
 {
 public:
-	Contact();
-	Contact(Person, Address);
-	void printLabel();
+	Address add;
+	Contact()
+	{
+		firstName;
+		lastName;
+	}
+
+	Contact(char pfn[], char pln[], char pstreet[], char pcity[], char pstate[], char pzip[])
+	{
+			strcpy(firstName, pfn);
+			strcpy(lastName, pln);
+	}
+	void printLabel()
+	{
+		if (strlen(firstName) > 0 && strlen(lastName) > 0)
+		{
+			Person::Print();
+			add.print();
+		}
+	}
 };
+
 
 class BusinessContact : public Contact
 {
+protected:
+	char businessName[51];
 public:
-	BusinessContact();
-	BusinessContact(char* pbn, Contact);
-	void printLabel();
+	BusinessContact()
+	{
+		businessName[0] = '\0';
+	}
+	BusinessContact(char pbn[], char pfn[], char pln[], char pstreet[], char pcity[], char pstate[], char pzip[])
+	{
+		strcpy(businessName, pbn);
+	}
+	void printLabel()
+	{
+		Contact::printLabel();
+	}
 };
-
-#endif
