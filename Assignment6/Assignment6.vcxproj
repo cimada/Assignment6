@@ -123,6 +123,7 @@
   <ItemGroup>
     <ClInclude Include="Address.h" />
     <ClInclude Include="Contact.h" />
+    <ClInclude Include="main.h" />
     <ClInclude Include="Person.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
