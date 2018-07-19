@@ -5,6 +5,8 @@
 #endif
 
 #include <iostream>
+#include <string.h>
+//#include <cstring>
 
 using namespace std;
 
@@ -19,7 +21,7 @@ public:
 		firstName[0] = '\0';
 		lastName[0] = '\0';
 	}
-	Person(char fn[], char ln[])
+	Person(char *fn, char *ln)
 	{
 		strcpy(firstName, fn);
 		strcpy(lastName, ln);
@@ -48,7 +50,7 @@ public:
 		state[0] = '\0';
 		zip[0] = '\0';
 	}
-	Address(char pstreet[], char pcity[], char pstate[], char pzip[])
+	Address(char *pstreet, char *pcity, char *pstate, char *pzip)
 	{
 		strcpy(street, pstreet);
 		strcpy(city, pcity);
@@ -67,27 +69,44 @@ public:
 
 class Contact : public Person
 {
+	//Address contactAddress;
+protected:
+	char firstName[51];
+	char lastName[51];
+	char street[51];
+	char city[26];
+	char state[3];
+	char zip[6];
+	Address contactAddress;
 public:
-	Address add;
 	Contact()
-	{
-		firstName;
-		lastName;
-	}
-
-	Contact(char pfn[], char pln[], char pstreet[], char pcity[], char pstate[], char pzip[])
+{
+		firstName[0] = '\0';
+		lastName[0] = '\0';
+		street[0] = '\0';
+		city[0] = '\0';
+		state[0] = '\0';
+		zip[0] = '\0';
+}
+	Contact(char *pfn, char *pln, char *pstreet, char *pcity, char *pstate, char *pzip)
 	{
 			strcpy(firstName, pfn);
 			strcpy(lastName, pln);
+			strcpy(street, pstreet);
+			strcpy(city, pcity);
+			strcpy(state, pstate);
+			strcpy(zip, pzip);
 	}
+	
 	void printLabel()
 	{
-		if (strlen(firstName) > 0 && strlen(lastName) > 0)
-		{
-			Person::Print();
-			add.print();
-		}
+			Print();
+			contactAddress.print();
 	}
+
+	//::Contact& operator=(const char str[50]);
+
+	//Contact(Person(), Address());
 };
 
 
@@ -100,7 +119,7 @@ public:
 	{
 		businessName[0] = '\0';
 	}
-	BusinessContact(char pbn[], char pfn[], char pln[], char pstreet[], char pcity[], char pstate[], char pzip[])
+	BusinessContact(char *pbn, char *pfn, char *pln, char *pstreet, char *pcity, char *pstate, char *pzip)
 	{
 		strcpy(businessName, pbn);
 	}
