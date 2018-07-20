@@ -18,10 +18,11 @@ protected:
 public:
 	Person()
 	{
-		firstName[0] = '\0';
-		lastName[0] = '\0';
+		//firstName;
+		//lastName;
+		
 	}
-	Person(char *fn, char *ln)
+	Person(char* fn, char* ln)
 	{
 		strcpy(firstName, fn);
 		strcpy(lastName, ln);
@@ -45,12 +46,13 @@ protected:
 public:
 	Address()
 	{
-		street[0] = '\0';
+		/*street[0] = '\0';
 		city[0] = '\0';
 		state[0] = '\0';
 		zip[0] = '\0';
+		*/
 	}
-	Address(char *pstreet, char *pcity, char *pstate, char *pzip)
+	Address(char* pstreet, char* pcity, char* pstate, char* pzip)
 	{
 		strcpy(street, pstreet);
 		strcpy(city, pcity);
@@ -78,16 +80,21 @@ protected:
 	char state[3];
 	char zip[6];
 	Address contactAddress;
+	int i;
 public:
 	Contact()
 {
-		firstName[0] = '\0';
+		/*firstName[0] = '\0';
 		lastName[0] = '\0';
 		street[0] = '\0';
 		city[0] = '\0';
 		state[0] = '\0';
 		zip[0] = '\0';
+		*/
+
+		strcpy(firstName, "N/A");
 }
+
 	Contact(char *pfn, char *pln, char *pstreet, char *pcity, char *pstate, char *pzip)
 	{
 			strcpy(firstName, pfn);
@@ -104,6 +111,8 @@ public:
 			contactAddress.print();
 	}
 
+	//::Contact& operator=(Contact* contact);
+
 	//::Contact& operator=(const char str[50]);
 
 	//Contact(Person(), Address());
@@ -117,9 +126,9 @@ protected:
 public:
 	BusinessContact()
 	{
-		businessName[0] = '\0';
+		//businessName[0] = '\0';
 	}
-	BusinessContact(char *pbn, char *pfn, char *pln, char *pstreet, char *pcity, char *pstate, char *pzip)
+	BusinessContact(char* pbn, char* pfn, char* pln, char* pstreet, char* pcity, char* pstate, char* pzip)
 	{
 		strcpy(businessName, pbn);
 	}

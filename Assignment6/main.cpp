@@ -13,7 +13,7 @@ using namespace std;
 
 int main()
 {
-	Contact c[5] = 
+	Contact c[5] =
 	{
 		Contact("abc", "abc", "abc", "abc", "abc", "abc"),
 		Contact("abc", "abc", "abc", "abc", "abc", "abc"),
