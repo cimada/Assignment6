@@ -1,4 +1,4 @@
-// main.h - inline header
+/* main.h - inline header
 #if !defined(MAIN)
 #define MAIN
 #define _CRT_SECURE_NO_WARNINGS
@@ -50,7 +50,7 @@ public:
 		city[0] = '\0';
 		state[0] = '\0';
 		zip[0] = '\0';
-		*/
+		
 	}
 	Address(char* pstreet, char* pcity, char* pstate, char* pzip)
 	{
@@ -90,7 +90,7 @@ public:
 		city[0] = '\0';
 		state[0] = '\0';
 		zip[0] = '\0';
-		*/
+		
 
 		strcpy(firstName, "N/A");
 }
@@ -137,3 +137,4 @@ public:
 		Contact::printLabel();
 	}
 };
+*/
