@@ -1,18 +1,18 @@
 #if !defined(CONTACT)
 #define CONTACT
+#endif
+#include <iostream>
 #include "Person.h"
 #include "Address.h"
-#include <iostream>
 
 using namespace std;
 
-/*class Contact :
-	public Person
+class Contact
 {
+protected:
+	//Contact(Person, Address);
 public:
-	Contact();
-	Contact contactAddress(Address);
-	Contact(char* pfn, char* pln, char* pstreet, char* pcity, char* pstate, char* pzip);
+	Contact(char *pfn, char *pln, char *pstreet, char *pcity, char *pstate, char *pzip);
+
+	void printLabel();
 };
-*/
-#endif
