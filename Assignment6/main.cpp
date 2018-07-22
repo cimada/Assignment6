@@ -12,7 +12,7 @@ using namespace std;
 
 int main()
 {
-	/*Contact c[5]; 
+	/*Contact c[5];
 	c[5] =
 	{
 		Contact("abc", "abc", "abc", "abc", "abc", "abc"),
@@ -23,7 +23,12 @@ int main()
 	};
 	*/
 
-	Contact c1 = ("abc", "abc", "abc", "abc", "abc", "abc");
+	Contact c1;
+
+Person:c1 = ("Billy", "Bob");
+Address:c1 = ("123 Main St", "Layton", "UT", "84041");
+
+	c1.printLabel();
 
 	system("pause");
 	return 0;

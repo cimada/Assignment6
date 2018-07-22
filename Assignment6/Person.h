@@ -1,6 +1,5 @@
 #if !defined(PERSON)
 #define PERSON
-#endif
 #include <iostream>
 
 using namespace std;
@@ -20,3 +19,4 @@ public:
 		cout << firstName << " " << lastName << endl;
 	}
 };
+#endif

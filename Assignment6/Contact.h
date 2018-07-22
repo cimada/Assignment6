@@ -1,6 +1,5 @@
 #if !defined(CONTACT)
 #define CONTACT
-#endif
 #include <iostream>
 #include "Person.h"
 #include "Address.h"
@@ -21,4 +20,7 @@ public:
 		Print();
 		contactAddress.print();
 	}
+
+	::Contact& operator=(string str);
 };
+#endif

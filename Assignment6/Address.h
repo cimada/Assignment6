@@ -1,6 +1,5 @@
 #if !defined(ADDRESS)
 #define ADDRESS
-#endif
 #include <iostream>
 
 using namespace std;
@@ -23,3 +22,4 @@ public:
 		cout << city << ", " << state << " " << zip << endl;
 	}
 };
+#endif

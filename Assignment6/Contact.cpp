@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "Contact.h"
 
-Contact::Contact(char *pfn, char *pln, char *pstreet, char *pcity, char *pstate, char *pzip) : Person(firstName, lastName)
+Contact::Contact(char pfn[], char pln[], char pstreet[], char pcity[], char pstate[], char pzip[])
 {
 	strcpy(firstName, pfn);
 	strcpy(lastName, pln);
@@ -11,9 +11,14 @@ Contact::Contact(char *pfn, char *pln, char *pstreet, char *pcity, char *pstate,
 	strcpy(contactAddress.zip, pzip);
 }
 
-Contact::Contact()
+::Contact& Contact::operator=(string str)
 {
-	
+	return *this;
 }
 
-void printLabel();
+Contact::Contact() = default;
+
+void printLabel()
+{
+
+}
