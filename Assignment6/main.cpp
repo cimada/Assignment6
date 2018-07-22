@@ -12,6 +12,18 @@ using namespace std;
 
 int main()
 {
+	/*Contact c[5]; 
+	c[5] =
+	{
+		Contact("abc", "abc", "abc", "abc", "abc", "abc"),
+		Contact("abc", "abc", "abc", "abc", "abc", "abc"),
+		Contact("abc", "abc", "abc", "abc", "abc", "abc"),
+		Contact("abc", "abc", "abc", "abc", "abc", "abc"),
+		Contact("abc", "abc", "abc", "abc", "abc", "abc"),
+	};
+	*/
+
+	Contact c1 = ("abc", "abc", "abc", "abc", "abc", "abc");
 
 	system("pause");
 	return 0;

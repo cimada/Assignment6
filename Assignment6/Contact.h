@@ -7,12 +7,18 @@
 
 using namespace std;
 
-class Contact
+class Contact : Person
 {
-protected:
-	//Contact(Person, Address);
 public:
+	Address contactAddress;
+
+	Contact();
+
 	Contact(char *pfn, char *pln, char *pstreet, char *pcity, char *pstate, char *pzip);
 
-	void printLabel();
+	void printLabel()
+	{
+		Print();
+		contactAddress.print();
+	}
 };

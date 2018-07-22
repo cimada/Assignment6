@@ -1,21 +1,19 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "Contact.h"
-#include "Person.h"
-#include "Address.h"
 
-/*Contact::Contact()
+Contact::Contact(char *pfn, char *pln, char *pstreet, char *pcity, char *pstate, char *pzip) : Person(firstName, lastName)
 {
-public:
-	Contact() : Person()
-	{
-		
-	}
+	strcpy(firstName, pfn);
+	strcpy(lastName, pln);
+	strcpy(contactAddress.street, pstreet);
+	strcpy(contactAddress.city, pcity);
+	strcpy(contactAddress.state, pstate);
+	strcpy(contactAddress.zip, pzip);
 }
 
-int Person::Contact(char* pfn, char* pln, char* pstreet, char* pcity, char* pstate, char* pzip)
+Contact::Contact()
 {
 	
 }
 
 void printLabel();
-*/

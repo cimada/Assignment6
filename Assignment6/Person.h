@@ -7,14 +7,14 @@ using namespace std;
 
 class Person
 {
+public:
 	char firstName[51];
 	char lastName[51];
-public:
-	Person(char *fn, char *ln)
-	{
-		strcpy(firstName, fn);
-		strcpy(lastName, ln);
-	}
+
+	Person();
+	
+	Person(char *fn, char *ln);
+
 	void Print()
 	{
 		cout << firstName << " " << lastName << endl;
